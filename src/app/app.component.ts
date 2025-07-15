@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { marked } from 'marked';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'markdown-previewer';
+  markdownText: string = '# Hello Markdown!';
+
+  get convertedHtml(): string {
+    return marked(this.markdownText);
+  }
 }
