@@ -1,6 +1,9 @@
 <!-- Title Bar -->
 <header class="header">
   <h1>Markdown Previewer</h1>
+  <button class="theme-toggle" (class)="toggleTheme()">
+    {{ isDarkMode ? "Light Mode" : "Dark Mode" }}
+  </button>
 </header>
 
 <!-- Main Layout -->
