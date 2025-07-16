@@ -54,11 +54,14 @@
   </div>
 </footer>
 
-<!-- Floating Theme Toggle (Left Side) -->
-<div class="theme-toggle-floating">
-  <label class="theme-switch">
+<!-- Floating Vertical Toggle with Icons Above & Below -->
+<div class="theme-toggle-wrapper">
+  <div class="theme-icon">☀️</div>
+
+  <label class="theme-toggle-vertical">
     <input type="checkbox" [checked]="isDarkMode" (change)="toggleTheme()" />
-    <span class="slider"></span>
-    <span class="mode-label">{{ isDarkMode ? "🌙 Dark" : "☀️ Light" }}</span>
+    <span class="toggle-slider"></span>
   </label>
+
+  <div class="theme-icon">🌙</div>
 </div>
