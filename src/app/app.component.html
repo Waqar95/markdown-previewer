@@ -1,12 +1,16 @@
-<!--Markdwn Input-->
+<!-- 🌟 Title Bar -->
+<header class="header">
+  <h1>🌈 Markdown Previewer</h1>
+</header>
+
+<!-- 🖥️ Main Layout -->
 <div class="container">
+  <!-- ✍️ Markdown Input -->
   <textarea
     [(ngModel)]="markdownText"
-    rows="20"
-    cols="40"
-    placeholder="Type Markdown here..."
+    placeholder="Write your Markdown here..."
   ></textarea>
 
-  <!--HTML Preview-->
+  <!-- 👁️ HTML Preview -->
   <div class="preview" [innerHTML]="convertedHtml"></div>
 </div>
