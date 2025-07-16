@@ -1,16 +1,18 @@
-<!-- 🌟 Title Bar -->
+<!-- Title Bar -->
 <header class="header">
-  <h1>🌈 Markdown Previewer</h1>
+  <h1>Markdown Previewer</h1>
 </header>
 
-<!-- 🖥️ Main Layout -->
+<!-- Main Layout -->
 <div class="container">
-  <!-- ✍️ Markdown Input -->
-  <textarea
-    [(ngModel)]="markdownText"
-    placeholder="Write your Markdown here..."
-  ></textarea>
+  <div class="editor-section">
+    <textarea
+      [(ngModel)]="markdownText"
+      placeholder="Write your Markdown here..."
+    ></textarea>
+    <button class="clear-btn" (click)="clearMarkdown()">Clear</button>
+  </div>
 
-  <!-- 👁️ HTML Preview -->
+  <!-- HTML Preview -->
   <div class="preview" [innerHTML]="convertedHtml"></div>
 </div>

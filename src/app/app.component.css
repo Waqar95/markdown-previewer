@@ -1,4 +1,4 @@
-/* 🌈 Global Styles */
+/* Global Styles */
 body {
   margin: 0;
   font-family: "Segoe UI", Roboto, sans-serif;
@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 
-/* 🌟 Title Bar */
+/* Title Bar */
 .header {
   background: linear-gradient(to right, #6c63ff, #00bcd4);
   color: white;
@@ -21,7 +21,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* 🧱 Layout */
+/* Layout */
 .container {
   display: flex;
   gap: 24px;
@@ -29,7 +29,7 @@ body {
   box-sizing: border-box;
 }
 
-/* ✍️ Markdown Input */
+/* Markdown Input */
 textarea {
   flex: 1;
   height: 500px;
@@ -49,7 +49,7 @@ textarea:focus {
   border-color: #00bcd4;
 }
 
-/* 👁️ Preview Pane */
+/* Preview Pane */
 .preview {
   flex: 1;
   height: 500px;
@@ -61,7 +61,7 @@ textarea:focus {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* 🖌️ Markdown Styling */
+/* Markdown Styling */
 .preview h1,
 .preview h2,
 .preview h3 {
@@ -79,4 +79,28 @@ textarea:focus {
   padding: 4px 8px;
   border-radius: 6px;
   font-family: "Courier New", monospace;
+}
+
+.editor-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🔘 Clear Button */
+.clear-btn {
+  margin-top: 12px;
+  background-color: #3b3b3b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.clear-btn:hover {
+  background-color: #141414;
 }

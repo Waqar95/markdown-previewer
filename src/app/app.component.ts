@@ -16,4 +16,8 @@ export class AppComponent {
     marked.setOptions({ async: false });
     return marked.parse(this.markdownText) as string;
   }
+
+  clearMarkdown() {
+    this.markdownText = '';
+  }
 }
