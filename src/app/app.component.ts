@@ -19,10 +19,6 @@ export class AppComponent {
     return marked.parse(this.markdownText) as string;
   }
 
-  clearMarkdown() {
-    this.markdownText = '';
-  }
-
   // PDF
   currentDate = new Date().toLocaleDateString();
 
@@ -126,5 +122,21 @@ export class AppComponent {
 
   get charCount(): number {
     return this.markdownText.length;
+  }
+
+  // Text Undo Logic
+
+  previousText: string = ''; // store last markdown
+
+  clearMarkdown() {
+    this.previousText = this.markdownText;
+    this.markdownText = '';
+  }
+
+  undoClear() {
+    if (this.previousText) {
+      this.markdownText = this.previousText;
+      this.previousText = '';
+    }
   }
 }

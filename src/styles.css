@@ -195,3 +195,40 @@ body.dark-mode .theme-icon {
 body.dark-mode .text-count {
   color: #aaa;
 }
+
+.button-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+
+.clear-btn,
+.undo-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.clear-btn {
+  background-color: #ff4d4f;
+  color: #fff;
+}
+
+.undo-btn {
+  background-color: #555;
+  color: #fff;
+}
+
+.undo-btn:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+body.dark-mode .undo-btn,
+body.dark-mode .clear-btn {
+  background-color: #444;
+  color: #eee;
+}
