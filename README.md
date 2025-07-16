@@ -1,59 +1,38 @@
-# MarkdownPreviewer
+# 📝 Markdown Previewer
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+A clean, responsive, and feature-rich Markdown editor built with Angular.  
+Live typing, live preview, dark/light mode, PDF export, and rich formatting tools.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Features
 
-```bash
-ng serve
-```
+- ✍️ **Live Markdown Editing & Preview**
+- 🎨 **Toolbar** with buttons for:
+  - Bold, Italic, Headings, Blockquote
+  - Code, Links, Images, Lists, Line break
+  - Text Alignment (Left, Center, Right)
+- 🌗 **Dark / Light Theme Toggle** (vertical switch with sun/moon icons)
+- 🔄 **Undo / Clear Buttons**
+- 🧮 **Word and Character Counter**
+- 📄 **Export to PDF** with header and footer
+- 📱 **Responsive Design**
+- 📦 Built using **Angular 17+**, HTML, CSS
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 📸 Screenshots
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+> Coming Soon (add screenshots here or link to deployed site preview)
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🧑‍💻 Tech Stack
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+| Tech          | Description                            |
+| ------------- | -------------------------------------- |
+| Angular       | Main framework (standalone components) |
+| TypeScript    | Strongly typed code                    |
+| marked.js     | Markdown parsing                       |
+| html2pdf.js   | PDF exporting                          |
+| CSS / Flexbox | Layout and theming                     |
