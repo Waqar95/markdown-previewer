@@ -160,3 +160,25 @@ textarea:focus {
   gap: 6px;
   flex-wrap: wrap;
 }
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.toolbar-btn {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.toolbar-btn:hover {
+  background-color: #cfd8dc;
+}

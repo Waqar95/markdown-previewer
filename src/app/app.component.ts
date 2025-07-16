@@ -36,4 +36,60 @@ export class AppComponent {
 
     html2pdf().set(opt).from(previewElement).save();
   }
+
+  insertHeading() {
+    this.markdownText += '\n# Heading\n';
+  }
+
+  insertBold() {
+    this.markdownText += '**bold**';
+  }
+
+  insertItalic() {
+    this.markdownText += '*italic*';
+  }
+
+  insertQuote() {
+    this.markdownText += '\n> quoted text\n';
+  }
+
+  insertCode() {
+    this.markdownText += '`code`';
+  }
+
+  insertLink() {
+    this.markdownText += '[title](https://example.com)';
+  }
+
+  insertImage() {
+    this.markdownText += '![alt text](https://via.placeholder.com/150)';
+  }
+
+  insertList() {
+    this.markdownText += '\n- item 1\n- item 2\n';
+  }
+
+  insertNumberedList() {
+    this.markdownText += '\n1. item 1\n2. item 2\n';
+  }
+
+  insertLine() {
+    this.markdownText += '\n---\n';
+  }
+
+  insertNewLine() {
+    this.markdownText += '\n';
+  }
+
+  alignLeft() {
+    this.markdownText += '\n<div align="left">\nYour text\n</div>\n';
+  }
+
+  alignCenter() {
+    this.markdownText += '\n<div align="center">\nYour text\n</div>\n';
+  }
+
+  alignRight() {
+    this.markdownText += '\n<div align="right">\nYour text\n</div>\n';
+  }
 }

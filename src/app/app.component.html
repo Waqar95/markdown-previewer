@@ -6,6 +6,29 @@
 <!-- Main Layout -->
 <div class="container">
   <div class="editor-section">
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <!-- Formatting -->
+      <button class="toolbar-btn" (click)="insertHeading()">H</button>
+      <button class="toolbar-btn" (click)="insertBold()">B</button>
+      <button class="toolbar-btn" (click)="insertItalic()">I</button>
+      <button class="toolbar-btn" (click)="insertQuote()">❝</button>
+      <button class="toolbar-btn" (click)="insertCode()">`</button>
+
+      <!-- Structure -->
+      <button class="toolbar-btn" (click)="insertLink()">🔗</button>
+      <button class="toolbar-btn" (click)="insertImage()">🖼️</button>
+      <button class="toolbar-btn" (click)="insertList()">•</button>
+      <button class="toolbar-btn" (click)="insertNumberedList()">1.</button>
+      <button class="toolbar-btn" (click)="insertLine()">―</button>
+      <button class="toolbar-btn" (click)="insertNewLine()">↵</button>
+
+      <!-- Alignment -->
+      <button class="toolbar-btn" (click)="alignLeft()">⬅️</button>
+      <button class="toolbar-btn" (click)="alignCenter()">⏺</button>
+      <button class="toolbar-btn" (click)="alignRight()">➡️</button>
+    </div>
+
     <textarea
       [(ngModel)]="markdownText"
       placeholder="Write your Markdown here..."
