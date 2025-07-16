@@ -72,3 +72,79 @@ body.dark-mode .preview em {
 body.dark-mode .preview hr {
   border-color: #555;
 }
+/* Floating position */
+.theme-toggle-floating {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 8px 12px;
+  background-color: #f5f5f5;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+/* Adjust in dark mode */
+body.dark-mode .theme-toggle-floating {
+  background-color: #222;
+}
+
+/* Switch container */
+.theme-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hidden checkbox */
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Switch track */
+.slider {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: background-color 0.3s;
+}
+
+/* Thumb */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  top: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+/* Checked styles */
+.theme-switch input:checked + .slider {
+  background-color: #00bcd4;
+}
+
+.theme-switch input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+/* Mode label styling */
+.mode-label {
+  font-size: 14px;
+  color: #222;
+}
+
+body.dark-mode .mode-label {
+  color: #fff;
+}

@@ -1,9 +1,15 @@
+<!-- Floating Theme Toggle -->
+<div class="theme-toggle-floating">
+  <label class="theme-switch">
+    <input type="checkbox" [checked]="isDarkMode" (change)="toggleTheme()" />
+    <span class="slider"></span>
+    <span class="mode-label">{{ isDarkMode ? "🌙 Dark" : "☀️ Light" }}</span>
+  </label>
+</div>
+
 <!-- Title Bar -->
 <header class="header">
   <h1>Markdown Previewer</h1>
-  <button class="theme-toggle" (class)="toggleTheme()">
-    {{ isDarkMode ? "Light Mode" : "Dark Mode" }}
-  </button>
 </header>
 
 <!-- Main Layout -->
