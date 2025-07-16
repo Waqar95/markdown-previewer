@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { marked } from 'marked';
 
+declare const html2pdf: any;
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -21,8 +22,6 @@ export class AppComponent {
     this.markdownText = '';
   }
 
-  declare html2pdf: any;
-
   downloadPDF() {
     const previewElement = document.querySelector('.preview');
     if (!previewElement) return;
@@ -35,6 +34,6 @@ export class AppComponent {
       jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
     };
 
-    this.html2pdf().set(opt).from(previewElement).save();
+    html2pdf().set(opt).from(previewElement).save();
   }
 }
