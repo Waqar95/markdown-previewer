@@ -20,4 +20,21 @@ export class AppComponent {
   clearMarkdown() {
     this.markdownText = '';
   }
+
+  declare html2pdf: any;
+
+  downloadPDF() {
+    const previewElement = document.querySelector('.preview');
+    if (!previewElement) return;
+
+    const opt = {
+      margin: 0.5,
+      filename: 'markdown-preview.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+    };
+
+    this.html2pdf().set(opt).from(previewElement).save();
+  }
 }

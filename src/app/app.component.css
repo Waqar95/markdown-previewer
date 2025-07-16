@@ -99,8 +99,32 @@ textarea:focus {
   font-weight: bold;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease;
+  character-spacing: 2px;
 }
 
 .clear-btn:hover {
   background-color: #141414;
+}
+
+.download-btn {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+  margin-top: 5px;
+}
+
+.download-btn:hover {
+  background-color: #0097a7;
+}
+
+.editor-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
 }
