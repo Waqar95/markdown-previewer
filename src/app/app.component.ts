@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { marked } from 'marked';
 
 declare const html2pdf: any;
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -22,9 +23,12 @@ export class AppComponent {
     this.markdownText = '';
   }
 
+  // PDF
+  currentDate = new Date().toLocaleDateString();
+
   downloadPDF() {
-    const previewElement = document.querySelector('.preview');
-    if (!previewElement) return;
+    const pdfContent = document.getElementById('pdf-content');
+    if (!pdfContent) return;
 
     const opt = {
       margin: 0.5,
@@ -34,7 +38,14 @@ export class AppComponent {
       jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
     };
 
-    html2pdf().set(opt).from(previewElement).save();
+    // Temporarily show it (for PDF layout), then hide
+    pdfContent.style.display = 'block';
+
+    html2pdf()
+      .set(opt)
+      .from(pdfContent)
+      .save()
+      .then(() => (pdfContent.style.display = 'none'));
   }
 
   insertHeading() {

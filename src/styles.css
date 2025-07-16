@@ -82,13 +82,12 @@ body.dark-mode .preview hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12px 8px 12px 8px;
   background-color: #000;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  gap: 10px;
+  gap: 15px;
 }
 
 /* In dark mode: use light background */
@@ -98,7 +97,7 @@ body.dark-mode .theme-toggle-wrapper {
 
 /* Day/Night icon style */
 .theme-icon {
-  font-size: 20px;
+  font-size: 2ch;
   color: #fff;
 }
 body.dark-mode .theme-icon {
@@ -150,4 +149,36 @@ body.dark-mode .theme-icon {
 /* Change track color when checked */
 .theme-toggle-vertical input:checked + .toggle-slider {
   background-color: #00bcd4;
+}
+
+/* PDF Styling */
+#pdf-content {
+  font-family: "Segoe UI", sans-serif;
+  padding: 20px;
+  color: #333;
+  max-width: 800px;
+  margin: auto;
+}
+
+#pdf-content .pdf-header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+#pdf-content .pdf-header h2 {
+  margin: 0;
+}
+
+#pdf-content .pdf-body {
+  margin-bottom: 30px;
+}
+
+#pdf-content .pdf-footer {
+  text-align: center;
+  font-size: 12px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  color: #555;
 }
