@@ -31,16 +31,4 @@ Live typing, live preview, dark/light mode, PDF export, and rich formatting tool
 | html2pdf.js   | PDF exporting                          |
 | CSS / Flexbox | Layout and theming                     |
 
-## 📂 Project Structure
-
-markdown-previewer/
-├── src/
-│ ├── app/
-│ │ ├── app.component.ts
-│ │ ├── app.component.html
-│ │ └── app.component.css
-│ ├── assets/
-│ └── styles.css
-├── angular.json
-├── package.json
-└── README.md
+Developed with ❤️ by Waqar Ahmed
