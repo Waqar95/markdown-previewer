@@ -116,4 +116,15 @@ export class AppComponent {
       body.classList.remove('dark-mode');
     }
   }
+
+  // Word Count Logic
+
+  get wordCount(): number {
+    if (!this.markdownText.trim()) return 0;
+    return this.markdownText.trim().split(/\s+/).length;
+  }
+
+  get charCount(): number {
+    return this.markdownText.length;
+  }
 }

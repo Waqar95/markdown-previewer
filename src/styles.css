@@ -182,3 +182,16 @@ body.dark-mode .theme-icon {
   padding-top: 10px;
   color: #555;
 }
+
+/* Word & character count */
+.text-count {
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+body.dark-mode .text-count {
+  color: #aaa;
+}

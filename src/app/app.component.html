@@ -33,6 +33,10 @@
       [(ngModel)]="markdownText"
       placeholder="Write your Markdown here..."
     ></textarea>
+    <!-- Word & Character Count -->
+    <div class="text-count">
+      {{ wordCount }} words · {{ charCount }} characters
+    </div>
     <button class="clear-btn" (click)="clearMarkdown()">Clear</button>
     <button class="download-btn" (click)="downloadPDF()">
       Download as .pdf
