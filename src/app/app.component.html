@@ -38,9 +38,7 @@
       {{ wordCount }} words · {{ charCount }} characters
     </div>
     <button class="clear-btn" (click)="clearMarkdown()">Clear</button>
-    <button class="undo-btn" [disabled]="!previousText" (click)="undoClear()">
-      Undo
-    </button>
+
     <button class="download-btn" (click)="downloadPDF()">
       Download as .pdf
     </button>

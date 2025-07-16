@@ -1,4 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+/* --------------------------------------
+   GLOBAL THEMING
+--------------------------------------- */
+
 /* Light Theme (default) */
 body {
   background-color: #ffffff;
@@ -11,18 +14,45 @@ body.dark-mode {
   color: #e0e0e0;
 }
 
-/* Adjust containers */
+/* --------------------------------------
+   CONTAINERS & PREVIEW AREA
+--------------------------------------- */
+
 body.dark-mode .container {
   background-color: #1e1e1e;
 }
 
 body.dark-mode .preview-wrapper {
   background-color: #2c2c2c;
+  border: 1px solid #444;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.preview {
+  padding: 10px;
 }
 
 body.dark-mode .preview {
+  background-color: #1e1e1e;
   color: #e0e0e0;
 }
+
+/* Markdown Elements in Dark Mode */
+body.dark-mode .preview h1,
+body.dark-mode .preview h2,
+body.dark-mode .preview h3,
+body.dark-mode .preview strong,
+body.dark-mode .preview em {
+  color: #f0f0f0;
+}
+
+body.dark-mode .preview hr {
+  border-color: #555;
+}
+
+/* --------------------------------------
+   TEXTAREA STYLING
+--------------------------------------- */
 
 body.dark-mode textarea {
   background-color: #1c1c1c;
@@ -30,7 +60,85 @@ body.dark-mode textarea {
   border: 1px solid #444;
 }
 
-/* Theme toggle button */
+/* --------------------------------------
+   THEME TOGGLE SWITCH (VERTICAL)
+--------------------------------------- */
+
+.theme-toggle-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  gap: 15px;
+  padding: 10px 6px;
+}
+
+body.dark-mode .theme-toggle-wrapper {
+  background-color: #f0f0f0;
+}
+
+.theme-icon {
+  font-size: 18px;
+  color: #fff;
+}
+body.dark-mode .theme-icon {
+  color: #222;
+}
+
+.theme-toggle-vertical {
+  position: relative;
+  width: 28px;
+  height: 64px;
+}
+
+.theme-toggle-vertical input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 28px;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s;
+}
+
+.toggle-slider::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: top 0.3s;
+}
+
+.theme-toggle-vertical input:checked + .toggle-slider::before {
+  top: 38px;
+}
+
+.theme-toggle-vertical input:checked + .toggle-slider {
+  background-color: #00bcd4;
+}
+
+/* --------------------------------------
+   THEME TOGGLE BUTTON (HORIZONTAL)
+--------------------------------------- */
+
 .theme-toggle {
   margin-left: auto;
   padding: 6px 12px;
@@ -46,112 +154,10 @@ body.dark-mode textarea {
   background-color: #0097a7;
 }
 
-/* Dark mode: preview container */
-body.dark-mode .preview-wrapper {
-  background-color: #1e1e1e;
-  border: 1px solid #444;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
+/* --------------------------------------
+   PDF EXPORT STYLING
+--------------------------------------- */
 
-/* Dark mode: markdown preview content */
-body.dark-mode .preview {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
-}
-
-/* Optional: dark mode headings or elements inside preview */
-body.dark-mode .preview h1,
-body.dark-mode .preview h2,
-body.dark-mode .preview h3,
-body.dark-mode .preview strong,
-body.dark-mode .preview em {
-  color: #f0f0f0;
-}
-
-/* Optional: fix horizontal rules and borders */
-body.dark-mode .preview hr {
-  border-color: #555;
-}
-
-/* Toggle container: fixed on left center */
-.theme-toggle-wrapper {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #000;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  gap: 15px;
-}
-
-/* In dark mode: use light background */
-body.dark-mode .theme-toggle-wrapper {
-  background-color: #f0f0f0;
-}
-
-/* Day/Night icon style */
-.theme-icon {
-  font-size: 2ch;
-  color: #fff;
-}
-body.dark-mode .theme-icon {
-  color: #222;
-}
-
-/* Toggle switch container */
-.theme-toggle-vertical {
-  position: relative;
-  width: 28px;
-  height: 64px;
-}
-
-.theme-toggle-vertical input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* Vertical slider track */
-.toggle-slider {
-  position: absolute;
-  cursor: pointer;
-  background-color: #ccc;
-  border-radius: 28px;
-  width: 100%;
-  height: 100%;
-  transition: background-color 0.3s;
-}
-
-/* Slider thumb */
-.toggle-slider::before {
-  content: "";
-  position: absolute;
-  left: 4px;
-  top: 6px;
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  border-radius: 50%;
-  transition: top 0.3s;
-}
-
-/* Move thumb down when checked */
-.theme-toggle-vertical input:checked + .toggle-slider::before {
-  top: 38px;
-}
-
-/* Change track color when checked */
-.theme-toggle-vertical input:checked + .toggle-slider {
-  background-color: #00bcd4;
-}
-
-/* PDF Styling */
 #pdf-content {
   font-family: "Segoe UI", sans-serif;
   padding: 20px;
@@ -183,7 +189,57 @@ body.dark-mode .theme-icon {
   color: #555;
 }
 
-/* Word & character count */
+/* --------------------------------------
+   CLEAR & UNDO BUTTONS
+--------------------------------------- */
+
+.button-row {
+  display: flex;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.button-row button {
+  flex: 1 1 50%;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+  transition: background-color 0.2s;
+}
+
+.clear-btn {
+  background-color: #ff4d4f;
+  color: #fff;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.undo-btn {
+  background-color: #555;
+  color: #fff;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.undo-btn:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+body.dark-mode .clear-btn {
+  background-color: #bb3333;
+}
+
+body.dark-mode .undo-btn {
+  background-color: #333;
+}
+
+/* --------------------------------------
+   WORD / CHARACTER COUNTER
+--------------------------------------- */
+
 .text-count {
   font-size: 13px;
   color: #666;
@@ -194,41 +250,4 @@ body.dark-mode .theme-icon {
 
 body.dark-mode .text-count {
   color: #aaa;
-}
-
-.button-group {
-  display: flex;
-  gap: 8px;
-  margin-top: 10px;
-  justify-content: flex-end;
-}
-
-.clear-btn,
-.undo-btn {
-  padding: 6px 12px;
-  font-size: 14px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.clear-btn {
-  background-color: #ff4d4f;
-  color: #fff;
-}
-
-.undo-btn {
-  background-color: #555;
-  color: #fff;
-}
-
-.undo-btn:disabled {
-  background-color: #aaa;
-  cursor: not-allowed;
-}
-
-body.dark-mode .undo-btn,
-body.dark-mode .clear-btn {
-  background-color: #444;
-  color: #eee;
 }
