@@ -13,6 +13,7 @@ export class AppComponent {
   markdownText: string = '# Hello Markdown!';
 
   get convertedHtml(): string {
-    return marked(this.markdownText);
+    marked.setOptions({ async: false });
+    return marked.parse(this.markdownText) as string;
   }
 }
