@@ -13,17 +13,11 @@ Live typing, live preview, dark/light mode, PDF export, and rich formatting tool
   - Code, Links, Images, Lists, Line break
   - Text Alignment (Left, Center, Right)
 - 🌗 **Dark / Light Theme Toggle** (vertical switch with sun/moon icons)
-- 🔄 **Undo / Clear Buttons**
+- 🔄 **Clear Buttons**
 - 🧮 **Word and Character Counter**
 - 📄 **Export to PDF** with header and footer
 - 📱 **Responsive Design**
 - 📦 Built using **Angular 17+**, HTML, CSS
-
----
-
-## 📸 Screenshots
-
-> Coming Soon (add screenshots here or link to deployed site preview)
 
 ---
 
@@ -36,3 +30,17 @@ Live typing, live preview, dark/light mode, PDF export, and rich formatting tool
 | marked.js     | Markdown parsing                       |
 | html2pdf.js   | PDF exporting                          |
 | CSS / Flexbox | Layout and theming                     |
+
+## 📂 Project Structure
+
+markdown-previewer/
+├── src/
+│ ├── app/
+│ │ ├── app.component.ts
+│ │ ├── app.component.html
+│ │ └── app.component.css
+│ ├── assets/
+│ └── styles.css
+├── angular.json
+├── package.json
+└── README.md
